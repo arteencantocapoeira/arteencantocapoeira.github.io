@@ -1,3 +1,7 @@
+- name: Início
+  link: /
+  new_window: false
+  highlight: false
 - name: Pricing
   link: /pricing/
   new_window: false
