@@ -50,7 +50,7 @@ header {
 }
 
 .content {
-	background: #ffff00; /*fff*/
+	background: #aaaa00; /*fff*/
 	padding: 1px 0 0 0;
 	position: relative;
 }
@@ -110,7 +110,7 @@ blockquote {
 }
 
 blockquote:before {
-	color: #cccc00; /*ccc*/
+	color: #000; /*ccc*/
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;
