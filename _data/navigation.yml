@@ -2,27 +2,27 @@
   link: /
   new_window: false
   highlight: false
-- name: Pricing
-  link: /pricing/
-  new_window: false
-  highlight: false
-- name: Blog
-  link: /blog/
-  new_window: false
-  highlight: false
-- name: About
+- name: Time
   link: /about/
   new_window: false
   highlight: false
-- name: Contact
+- name: Notícias
+  link: /blog/
+  new_window: false
+  highlight: false
+- name: Graduação
+  link: /graduacao/
+  new_window: false
+  highlight: false
+- name: Curiosidades
+  link: /curiosidades/
+  new_window: false
+  highlight: false
+- name: Localização
   link: /contact/
   new_window: false
   highlight: false
-- name: Login
-  link: /
-  new_window: true
+- name: Produtos
+  link: /pricing/
+  new_window: false
   highlight: false
-- name: Sign Up
-  link: /
-  new_window: true
-  highlight: true
