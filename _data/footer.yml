@@ -1,27 +1,19 @@
 - links:
   - name: Início
     link: /
-  - name: Pricing
-    link: /pricing/
-  - name: Blog
+  - name: Time
+    link: /time/
+  - name: Notícias
     link: /blog/
-  - name: About
-    link: /about/
-  - name: Contact
-    link: /contact/
+  - name: Graduação
+    link: /graduacao/
 - links:
-  - name: Login
-    link: /
-    new_window: true
-  - name: Sign Up
-    link: /
-    new_window: true
-  - name: Docs
-    link: /
-    new_window: true
-  - name: Status
-    link: /
-    new_window: true
+  - name: Curiosidades
+    link: /curiosidades/
+  - name: Localização
+    link: /localizacao/
+  - name: Produtos
+    link: /produtos/
 - links:
   - name: Facebook
     link: https://www.facebook.com/arteencantocapoeira
