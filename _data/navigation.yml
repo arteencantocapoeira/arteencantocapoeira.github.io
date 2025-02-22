@@ -3,7 +3,7 @@
   new_window: false
   highlight: false
 - name: Time
-  link: /about/
+  link: /time/
   new_window: false
   highlight: false
 - name: Notícias
@@ -19,10 +19,10 @@
   new_window: false
   highlight: false
 - name: Localização
-  link: /contact/
+  link: /localizacao/
   new_window: false
   highlight: false
 - name: Produtos
-  link: /pricing/
+  link: /produtos/
   new_window: false
   highlight: false
