@@ -9,8 +9,12 @@ description: >-
 <ul class="staff">
 	{% for person in site.staff_members %}
 		<li>
-			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="square-image"><img src="{"{{ site.baseurl }}/images/{{ person.name }}".jpg"}/></div> 
 			<div class="name"><a target="_blank" href="https://instagram.com/{{ person.instagram }}">{{ person.name }}</a></div>
 		</li>
 	{% endfor %}
 </ul>
+
+% include relative-src.html src=person.image_path %}
+
+"{1-Natalino.jpg"
