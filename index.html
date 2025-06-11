@@ -4,31 +4,45 @@ description: Quem vem uma vez quer voltar.
 ---
 
 <style>
+  /* ===== VARIÁVEIS DE COR ===== */
+  :root {
+    --verde-escuro: #1E4D2B;
+    --verde-medio: #2E8B57;
+    --verde-claro: #3CB371;
+    --amarelo: #FFD700;
+    --amarelo-claro: #FFF8E6;
+    --branco: #FFFFFF;
+    --cinza-claro: #f8f9fa;
+  }
+
   /* ===== ESTILOS GERAIS ===== */
   .hero {
-    background: #f8f8f8; /* Fundo branco acinzentado */
-    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--branco) 0%, var(--cinza-claro) 100%);
+    padding: 80px 0 60px 0;
     text-align: center;
     position: relative;
-    border-bottom: 3px solid #1E4D2B;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(90deg, var(--verde-escuro), var(--amarelo), var(--verde-escuro)) 1;
   }
 
   .hero-logo {
     max-width: 400px;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
   }
 
   .subtext {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #1E4D2B; /* Verde escuro */
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
     margin-top: 10px;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(255, 215, 0, 0.4);
+    padding: 0 20px;
   }
 
   .content {
-    background: #FFF;
+    background: var(--branco);
   }
 
   section {
@@ -49,20 +63,22 @@ description: Quem vem uma vez quer voltar.
   }
 
   .text {
-    padding: 30px;
-    background: rgba(255, 248, 230, 0.6); /* Amarelo muito claro */
+    padding: 35px 30px;
+    background: var(--amarelo-claro);
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    border: 1px solid #f0e6d0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--amarelo);
   }
 
   .text h2 {
-    color: #1E4D2B; /* Verde bandeira */
+    color: var(--verde-escuro);
     position: relative;
     padding-bottom: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
+    font-size: 2.2rem;
   }
 
   .text h2::after {
@@ -71,45 +87,58 @@ description: Quem vem uma vez quer voltar.
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100px;
     height: 3px;
-    background: #FFD700; /* Amarelo bandeira */
+    background: var(--verde-medio);
+    border-radius: 2px;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
   }
 
   .image {
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    border: 3px solid #1E4D2B; /* Borda verde */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(30, 77, 43, 0.1);
   }
 
   .image:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   }
 
   .image img {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .image:hover img {
+    transform: scale(1.03);
   }
 
   /* ===== DEPOIMENTO ===== */
   .testimonial {
-    background: #1E4D2B; /* Verde bandeira */
+    background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-medio) 100%);
     color: white;
     position: relative;
-    border-top: 5px solid #FFD700; /* Amarelo bandeira */
+    border-top: 5px solid var(--amarelo);
   }
 
   .testimonial::before {
     content: """;
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 180px;
-    color: rgba(255, 215, 0, 0.15);
+    font-size: 200px;
+    color: rgba(255, 215, 0, 0.1);
     font-family: Georgia, serif;
     line-height: 1;
   }
@@ -118,34 +147,40 @@ description: Quem vem uma vez quer voltar.
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+    padding: 20px;
   }
 
   .square-image {
-    width: 120px;
-    height: 120px;
-    border: 3px solid #FFD700; /* Amarelo bandeira */
-    margin: 0 auto 25px;
+    width: 140px;
+    height: 140px;
+    border: 4px solid var(--amarelo);
+    margin: 0 auto 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   }
 
   blockquote {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.7;
     position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .author {
-    color: #FFD700; /* Amarelo bandeira */
-    font-weight: 600;
-    margin-top: 20px;
-    font-size: 1.2rem;
+    color: var(--amarelo);
+    font-weight: 700;
+    margin-top: 25px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
   }
 
   /* ===== CALL TO ACTION ===== */
   .bottom-cta {
-    background: linear-gradient(135deg, #1E4D2B 0%, #2E8B57 100%); /* Verde bandeira */
+    background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-medio) 100%);
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
     color: white;
     position: relative;
     overflow: hidden;
@@ -158,51 +193,55 @@ description: Quem vem uma vez quer voltar.
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="150" cy="50" r="8" fill="%23FFD700" opacity="0.2"/><circle cx="100" cy="150" r="10" fill="%23FFD700" opacity="0.2"/><circle cx="50" cy="100" r="6" fill="%23FFD700" opacity="0.2"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="150" cy="50" r="8" fill="%23FFD700" opacity="0.15"/><circle cx="100" cy="150" r="10" fill="%23FFD700" opacity="0.15"/><circle cx="50" cy="100" r="6" fill="%23FFD700" opacity="0.15"/></svg>');
     background-size: 200px;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 
   .bottom-cta h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
     position: relative;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
   }
 
   .bottom-cta p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     max-width: 600px;
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
     position: relative;
+    font-weight: 300;
   }
 
   .button {
     display: inline-block;
-    background: #FFD700; /* Amarelo bandeira */
-    color: #1E4D2B; /* Verde bandeira */
-    padding: 15px 40px;
+    background: var(--amarelo);
+    color: var(--verde-escuro);
+    padding: 16px 45px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
-    border: 2px solid #FFD700;
+    border: 2px solid var(--amarelo);
     position: relative;
     z-index: 2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    letter-spacing: 0.5px;
   }
 
   .button:hover {
-    background: transparent;
-    color: #FFD700;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: rgba(255, 215, 0, 0.9);
+    color: var(--verde-escuro);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   }
 
   /* ===== RESPONSIVO ===== */
   @media (max-width: 768px) {
     .container.flex {
       flex-direction: column;
-      gap: 30px;
+      gap: 40px;
     }
     
     .container.flex:nth-child(even) {
@@ -210,11 +249,15 @@ description: Quem vem uma vez quer voltar.
     }
     
     .hero {
-      padding: 60px 20px;
+      padding: 60px 20px 40px 20px;
     }
     
     .hero-logo {
       max-width: 280px;
+    }
+    
+    .subtext {
+      font-size: 1.4rem;
     }
     
     section {
@@ -222,7 +265,15 @@ description: Quem vem uma vez quer voltar.
     }
     
     .text {
-      padding: 20px;
+      padding: 25px 20px;
+    }
+    
+    blockquote {
+      font-size: 1.3rem;
+    }
+    
+    .bottom-cta h2 {
+      font-size: 2.2rem;
     }
   }
 </style>
@@ -267,7 +318,7 @@ description: Quem vem uma vez quer voltar.
     <div class="container flex">
       <div class="testimonial-block">
         <div class="square-image">
-          <img src="{{ site.baseurl }}/Mestre-Natalino.jpg" alt="Mestre Natalino"/>
+          <img src="{{ site.baseurl }}/images/mestre-natalino-profile.jpg" alt="Mestre Natalino"/>
         </div>
         <blockquote>
           <p>"Quem vem uma vez quer voltar. A capoeira é uma arte que encanta, transforma e une pessoas de todas as idades e origens."</p>
