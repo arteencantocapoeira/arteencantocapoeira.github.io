@@ -21,13 +21,15 @@
 		{% endif %}
 	</head>
 	<body>
-<header style="background: #1E4D2B; display: flex; align-items: center; padding: 10px 20px;">
+<header class="site-header" style="background: #1E4D2B; display: flex; align-items: center; padding: 10px 20px;">
+  
+  <!-- Logo Circular -->
   <div class="logo-circle">
-    <a href="/">
-      <img src="/siteicon.png" alt="Arte e Encanto Capoeira" />
+    <a href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/siteicon.png" alt="{{ site.title }}" />
     </a>
   </div>
-  <nav style="margin-left: auto;">
+<nav style="margin-left: auto;">
     <!-- Your existing navigation links here -->
   </nav>
 </header>
