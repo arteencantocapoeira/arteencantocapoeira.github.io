@@ -19,8 +19,12 @@
     link: https://www.facebook.com/arteencantocapoeira
     new_window: true
     social_icon: Facebook
-  - name: Instagram
+  - name: Instagram (Carmópolis de Minas)
     link: https://www.instagram.com/arteencanto_capoeira/
+    social_icon: Instagram
+    new_window: true
+  - name: Instagram (Cláudio)
+    link: https://www.instagram.com/arteencanto.claudio/
     social_icon: Instagram
     new_window: true
   - name: YouTube
