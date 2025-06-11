@@ -182,7 +182,7 @@ blockquote:before {
   flex-shrink: 0; /* Evita que o logo diminua em telas pequenas */
 
   img {
-    width: 70%; /* Ajuste este valor conforme necessário */
+    width: 100%; /* Ajuste este valor conforme necessário */
     height: auto;
     transition: transform 0.3s ease;
   }
