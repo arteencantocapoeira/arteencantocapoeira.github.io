@@ -22,7 +22,7 @@
 header {
   color: #fff; // ✅ Changed text to white
   padding: 20px 0;
-  background: #2E8B57; // ✅ Solid green (removed gradient)
+  background: #1E4D2B; // ✅ Solid green (removed gradient)
   &:hover {
     color: #FFD700; // Gold accent
     text-decoration: underline;
@@ -32,6 +32,15 @@ header {
     &:hover {
       color: #FFD700; // ✅ Gold hover
     }
+  }
+}
+
+
+.company-name img {
+  filter: brightness(0) invert(1); // Forces logo to pure white
+  opacity: 0.9; // Slight transparency for elegance
+  &:hover {
+    opacity: 1; // Full white on hover
   }
 }
 
