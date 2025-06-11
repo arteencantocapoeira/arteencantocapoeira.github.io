@@ -25,7 +25,8 @@ header {
   background: #2E8B57; // ✅ Solid green (removed gradient)
   &:hover {
     color: #FFD700; // Gold accent
-    text-decoration: underline; // Clear interaction cue
+    text-decoration: underline;
+}// Clear interaction cue
   a {
     color: #fff; // ✅ White links
     &:hover {
