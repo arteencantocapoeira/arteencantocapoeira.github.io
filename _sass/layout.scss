@@ -17,55 +17,38 @@
 	}
 }
 
+
+// Updated Header
 header {
-	color: #000; /* fff */
-	padding: 20px 0;
-	background: $brand-color; /* Old browsers #C3F763  */
-	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color; 
+  color: #fff; // ✅ Changed text to white
+  padding: 20px 0;
+  background: #2E8B57; // ✅ Solid green (removed gradient)
 
-	a {
-		color: #000;  /*fff*/
-		text-decoration: none;
-		z-index: 1;
-		position: relative;
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	.company-name {
-		font-size: 1.7em;
-		line-height: 0;
-
-		a {
-			display: inline-block;
-		}
-
-		img {
-			display: block;
-			width: auto;
-		}
-	}
+  a {
+    color: #fff; // ✅ White links
+    &:hover {
+      color: #FFD700; // ✅ Gold hover
+    }
+  }
 }
 
+// Updated Content Area
 .content {
-	background: #FEF055; /* #fef055  #fff*/
-	padding: 1px 0 0 0;
-	position: relative;
+  background: #FFF8E6; // ✅ Warm off-white
 }
 
-.screenshot{
-	max-width: 100%;
-	height: auto;
-	display: block;
-	box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
-	border-radius: 2px;
-	margin-left: auto;
-	margin-right: auto;
-	background: #AAAA00 url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E') 4px 4px no-repeat; /*DDD*/
-	padding: 20px 0 0 0;
-	position: relative;
+// Updated Screenshot Styling
+.screenshot {
+  background: #f0f0f0 url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E'); // ✅ Light gray
+}
+
+// Optional: Add button styles if not present
+.btn {
+  background-color: #8B0000; // ✅ Dark red
+  color: white;
+  &:hover {
+    background-color: #FFD700; // ✅ Gold
+  }
 }
 
 section {
