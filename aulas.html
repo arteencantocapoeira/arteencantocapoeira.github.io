@@ -1,180 +1,89 @@
 ---
 title: Aulas
-heading: Get in touch today
-description: We'd love to help you improve your sales.
-
-map:
-  latitude: -45.8787605
-  longitude: 170.5027976
-  address: "1 George Street, Dunedin, New Zealand"
-  zoom: 13
+heading: Horários e Locais
+description: Confira nossos horários de aula em Carmópolis de Minas e Cláudio
 ---
-<div class="map" id="map"></div>
 
-<p>Página em construção </p>
+<div class="aulas-container">
+  <!-- Seção Carmópolis de Minas -->
+  <section class="cidade-aulas">
+    <h2>Carmópolis de Minas</h2>
+    <div class="aulas-info">
+      <p>Informações sobre as aulas em Carmópolis de Minas serão disponibilizadas em breve.</p>
+      <p>Entre em contato para mais informações:</p>
+      <p><strong>Telefone:</strong> (37) XXXX-XXXX</p>
+    </div>
+  </section>
 
-
-<div class="contact-box">
-	<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-		<input type="hidden" name="_to" value="support@example.com" />
-		<input type="text" name="_gotcha" style="display: none;">
-
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." />
-
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
-
-		<label for="message">Message</label>
-		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
-
-		<input type="submit" value="Send Message" />
-	</form>
-
-	<div class="contact-details">
-		<h3 class="editable">Address</h3>
-		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
-
-		<h3 class="editable">Email</h3>
-		<p><a href="mailto:support@example.com">support@example.com</a></p>
-	</div>
+  <!-- Seção Cláudio -->
+  <section class="cidade-aulas">
+    <h2>Cláudio</h2>
+    <div class="aulas-info">
+      <h3>Horários:</h3>
+      <ul>
+        <li><strong>Segunda-feira:</strong> 18h30 às 19h30</li>
+        <li><strong>Sexta-feira:</strong> 18h30 às 19h30</li>
+      </ul>
+      
+      <h3>Locais:</h3>
+      <ul>
+        <li>
+          <strong>Segunda-feira:</strong><br>
+          Poliesportivo do Bide<br>
+          R. São Luís - Cláudio, MG, 35530-000
+        </li>
+        <li>
+          <strong>Sexta-feira:</strong><br>
+          Anexo do Centro Cultural<br>
+          R. Curitiba, 245 - Centro, Cláudio - MG, 35530-000
+        </li>
+      </ul>
+      
+      <h3>Inscrições:</h3>
+      <p>Para se inscrever nas aulas em Cláudio, entre em contato com a Secretaria de Esportes:</p>
+      <p><strong>Telefone:</strong> <a href="tel:+5537999347857">(37) 9 9934-7857</a></p>
+    </div>
+  </section>
 </div>
 
-<script type="text/javascript">
-	window.mapData = {{ page.map | jsonify }};
-
-	function initMap() {
-		var myOptions = {
-			scrollwheel: false,
-			draggable: false,
-			panControl: false,
-			disableDefaultUI: true,
-			styles: [{
-				"featureType": "all",
-				"elementType": "labels.text.fill",
-				"stylers": [{
-					"saturation": 36
-				}, {
-					"color": "#000000"
-				}, {
-					"lightness": 40
-				}]
-			}, {
-				"featureType": "all",
-				"elementType": "labels.text.stroke",
-				"stylers": [{
-					"visibility": "on"
-				}, {
-					"color": "#000000"
-				}, {
-					"lightness": 16
-				}]
-			}, {
-				"featureType": "all",
-				"elementType": "labels.icon",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			}, {
-				"featureType": "administrative",
-				"elementType": "geometry.fill",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 20
-				}]
-			}, {
-				"featureType": "administrative",
-				"elementType": "geometry.stroke",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 17
-				}, {
-					"weight": 1.2
-				}]
-			}, {
-				"featureType": "landscape",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 20
-				}]
-			}, {
-				"featureType": "poi",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 21
-				}]
-			}, {
-				"featureType": "road.highway",
-				"elementType": "geometry.fill",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 17
-				}]
-			}, {
-				"featureType": "road.highway",
-				"elementType": "geometry.stroke",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 29
-				}, {
-					"weight": 0.2
-				}]
-			}, {
-				"featureType": "road.arterial",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 18
-				}]
-			}, {
-				"featureType": "road.local",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 16
-				}]
-			}, {
-				"featureType": "transit",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 19
-				}]
-			}, {
-				"featureType": "water",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#000000"
-				}, {
-					"lightness": 17
-				}]
-			}],
-			zoom: window.mapData.zoom,
-			maxZoom: window.mapData.zoom,
-			minZoom: window.mapData.zoom,
-			center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
-		map = new google.maps.Map(document.getElementById("map"), myOptions);
-		marker = new google.maps.Marker({
-			map: map,
-			position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
-		});
-
-		google.maps.event.addDomListener(window, "resize", function () {
-			map.setCenter(myOptions.center);
-		});
-	}
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+<style>
+  .aulas-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cidade-aulas {
+    background: #FFF8E6;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .cidade-aulas h2 {
+    color: #1E4D2B;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+  
+  .aulas-info h3 {
+    color: #8B0000;
+    margin-top: 20px;
+  }
+  
+  .aulas-info ul {
+    padding-left: 20px;
+  }
+  
+  .aulas-info li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .cidade-aulas {
+      padding: 20px;
+    }
+  }
+</style>
