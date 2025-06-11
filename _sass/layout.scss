@@ -203,3 +203,44 @@ blockquote:before {
     height: 50px;
   }
 }
+
+
+
+/* Estilização dos Links */
+.site-nav a {
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #FFD700 !important;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+
