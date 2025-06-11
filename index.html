@@ -2,75 +2,291 @@
 title: Arte EnCanto Capoeira
 description: Quem vem uma vez quer voltar.
 ---
+
+<style>
+  /* ===== ESTILOS GERAIS ===== */
+  .hero {
+    background: linear-gradient(rgba(30, 77, 43, 0.85), rgba(30, 77, 43, 0.9)), 
+                url('{{ site.baseurl }}/images/capoeira-bg.jpg') center/cover;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('{{ site.baseurl }}/images/berimbau-pattern.png') repeat;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .hero-logo {
+    max-width: 400px;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+  }
+
+  .subtext {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #FFD700;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  .content {
+    background: #FFF8E6;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  /* ===== SEÇÕES DE CONTEÚDO ===== */
+  .container.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .container.flex > div {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .text {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+  }
+
+  .text::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 60px;
+    height: 60px;
+    background: url('{{ site.baseurl }}/images/capoeira-icon.png') center/contain no-repeat;
+    z-index: -1;
+    opacity: 0.1;
+  }
+
+  .text h2 {
+    color: #1E4D2B;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .text h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #8B0000;
+  }
+
+  .image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .image:hover {
+    transform: translateY(-5px);
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ===== DEPOIMENTO ===== */
+  .testimonial {
+    background: #1E4D2B;
+    color: white;
+    position: relative;
+  }
+
+  .testimonial::before {
+    content: """;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 180px;
+    color: rgba(255, 215, 0, 0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .testimonial-block {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .square-image {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #FFD700;
+    margin: 0 auto 25px;
+  }
+
+  blockquote {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .author {
+    color: #FFD700;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+  /* ===== CALL TO ACTION ===== */
+  .bottom-cta {
+    background: linear-gradient(to right, #8B0000, #B22222);
+    text-align: center;
+    padding: 70px 20px;
+    color: white;
+  }
+
+  .bottom-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .bottom-cta p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+
+  .button {
+    display: inline-block;
+    background: #FFD700;
+    color: #1E4D2B;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+  }
+
+  .button:hover {
+    background: transparent;
+    color: #FFD700;
+    border-color: #FFD700;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width: 768px) {
+    .container.flex {
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .container.flex:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+    
+    .hero {
+      padding: 60px 20px;
+    }
+    
+    .hero-logo {
+      max-width: 280px;
+    }
+    
+    section {
+      padding: 60px 20px;
+    }
+  }
+</style>
+
 <section class="hero">
-	<div class="text-container">		
-			<img src="{{ site.baseurl }}/images/ARTE_ENCANTO_CAPOEIRA.png"  />
-			<p></p>
-			<p class="subtext editable"><font color=#2e3192 weight="bold">Mestre Natalino </font></p>
-		</div>
-	</div>
+  <div class="text-container">    
+    <img src="{{ site.baseurl }}/images/ARTE_ENCANTO_CAPOEIRA.png" alt="Arte EnCanto Capoeira" class="hero-logo" />
+    <p class="subtext">Mestre Natalino</p>
+  </div>
 </section>
 
 <div class="content">
-	<section>
-		<div class="container flex">
-			<div class="text editable">
-				<center>
-				<h2><strong>Origem</strong></h2>
-				<p>O grupo Arte EnCanto  é resultado da caminhada do Mestre Natalino, que desde 1991 começou a praticar Capoeira na cidade de Guape.</p>
-				</center>
-			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/Foto1.jpg"/>
-			</div>
-		</div>
-	</section>
+  <section>
+    <div class="container flex">
+      <div class="text editable">
+        <h2><strong>Origem</strong></h2>
+        <p>O grupo Arte EnCanto é resultado da caminhada do Mestre Natalino, que desde 1991 começou a praticar Capoeira na cidade de Guapé.</p>
+        
+        <p>Seu estilo de jogo é a combinação harmônica dos golpes com os floreios. Ao comando da música se vê a agilidade da luta. A simplicidade do berimbau e a técnica do jogo de dentro.</p>
+      </div>
+      <div class="image">
+        <img src="{{ site.baseurl }}/Foto1.jpg" alt="Mestre Natalino ensinando capoeira"/>
+      </div>
+    </div>
+  </section>
 
-	<section>
-		<div class="container flex">
-			<div class="text editable">
-				<center>
-				<p>Seu estilo de jogo é a combinação harmônica dos golpes com os floreios.</p>
-				<p>Ao comando da música se vê a agilidade da luta.</p>
-				<p>A simplicidade do berimbau e a técnica do jogo de dentro.</p>
-				</center>
-			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/Foto4.png" />
-			</div>
-		</div>
-	</section>
+  <section>
+    <div class="container flex">
+      <div class="image">
+        <img src="{{ site.baseurl }}/Foto4.png" alt="Roda de capoeira"/>
+      </div>
+      <div class="text editable">
+        <h2><strong>Filosofia</strong></h2>
+        <p>A roda Arte Encanto Capoeira é o ponto de encontro de camaradas que partilham sua experiência essencial da Capoeira enquanto arte.</p>
+        <p>Se respeitam e jogam juntos, com o principal objetivo de vivenciar a melhor parte da nossa cultura.</p>
+        <p>Cada movimento conta uma história, cada golpe é um verso na poesia corporal que escrevemos juntos.</p>
+      </div>
+    </div>
+  </section>
 
-	<section>
-		<div class="container flex">
-			<div class="text editable">
-				<center>
-				<p>A roda Arte Encanto Capoeira é o ponto de encontro de camaradas que partilham sua experiência essencial da Capoeira enquanto arte.</p>
-				<p>Se respeitam e jogam juntos, com o principal objetivo de vivenciar a melhor parte da nossa cultura.</p>
-				</center>
-			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/Foto3.png"/>
-			</div>
-		</div>
-	</section>
+  <section class="testimonial">
+    <div class="container flex">
+      <div class="testimonial-block">
+        <div class="square-image">
+          <img src="{{ site.baseurl }}/images/mestre-natalino-profile.jpg" alt="Mestre Natalino"/>
+        </div>
+        <blockquote>
+          <p>"Quem vem uma vez quer voltar. A capoeira é uma arte que encanta, transforma e une pessoas de todas as idades e origens."</p>
+          <p class="author">Mestre Natalino</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
-	<section class="testimonial">
-		<div class="container flex">
-			<div class="testimonial-block">
-				<div class="square-image"><img src="https://source.unsplash.com/6anudmpILw4/600x400" alt="Jim James" class="editable"></div>
-				<blockquote>
-					<p class="editable">Quem vem uma vez quer voltar. </p>
-					<p class="editable author">Mestre Natalino</p>
-				</blockquote>
-			</div>
-		</div>
-	</section>
-
-	<section class="bottom-cta">
-		<h2 class="editable"><strong>Venha somar com a gente!</strong></h2>
-		<p class="editable"><font color="#FFFFFF"> Aulas em Carmópolis de Minas e Cláudio. </font></p>
-		<p> </p>
-		<div class="button alt"><a href="https://www.instagram.com/arteencanto_capoeira/">Entre em contato.</a></div>
-	</section>
+  <section class="bottom-cta">
+    <h2><strong>Venha somar com a gente!</strong></h2>
+    <p>Aulas em Carmópolis de Minas e Cláudio</p>
+    <div class="button alt">
+      <a href="https://www.instagram.com/arteencanto_capoeira/">Entre em contato</a>
+    </div>
+  </section>
 </div>
+
